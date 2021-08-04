@@ -12,9 +12,24 @@ public class IngredientService {
     @Autowired
     private IngredientRepository ingredientRepository;
 
-    public List<Ingredient> getIngredientById(int id) {
-        return ingredientRepository.findAllById(id);
+    //Get Ingredient(s)
+    public Ingredient getIngredientById(int id) {
+        return ingredientRepository.findOneById(id);
     }
+    public Ingredient getIngredientByName(String name) {
+        return ingredientRepository.findByName(name);
+    }
+    public List<Ingredient> getAllIngredients() {
+        return ingredientRepository.findAll();
+    }
+    //Add Ingredient(s)
+    public void addIngredient(Ingredient ingd) {
+        ingredientRepository.save(ingd);
+    }
+    public Ingredient saveIngredient(Ingredient ingd) {
+        return (Ingredient) ingredientRepository.save(ingd);
+    }
+
 
 
 }

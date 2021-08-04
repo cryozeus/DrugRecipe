@@ -8,6 +8,4 @@ import java.util.List;
 public interface CompositionRepository extends JpaRepository {
     List<Composition> findById(int id);
     List<Composition> findByCompName(String compName);
-    Composition deleteById(int id);
-    List<Composition> deleteByCompName(String compName);
 }
