@@ -8,5 +8,5 @@ import java.util.List;
 public interface CompositionRepository extends JpaRepository {
     List<Composition> findById(int id);
     List<Composition> findByCompName(String compName);
-    Composition findOneByName(String compName)
+    Composition findOneByName(String compName);
 }

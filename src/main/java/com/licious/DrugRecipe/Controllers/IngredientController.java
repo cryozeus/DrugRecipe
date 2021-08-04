@@ -7,9 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class IngredientController {
@@ -22,17 +20,20 @@ public class IngredientController {
         Ingredient ingd = ingredientService.saveIngredient(ingdRes);
         return new ResponseEntity<>(ingd, HttpStatus.ACCEPTED);
     }
+
     //GET INGREDIENT(S)
     @RequestMapping("/ingd/list")
     public List<Ingredient> getIngredients() {
         List<Ingredient> ingdAll = ingredientService.getAllIngredients();
         return ingdAll;
     }
+
     @RequestMapping("/ingd")
     public Ingredient getIngredient(@RequestParam("ingdID") int ingdID) {
         Ingredient ingd = ingredientService.getIngredientById(ingdID);
         return ingd;
     }
+
     @GetMapping("ingd/name")
     public Ingredient getIngredientByName(@RequestParam("ingdName") String name) {
         Ingredient ingdByName = ingredientService.getIngredientByName(name);
@@ -40,5 +41,5 @@ public class IngredientController {
     }
 
 
-
+}
 

@@ -11,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="composition_ingredients")
-public class CompositionIngredients {
+public class CompositionIngredient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int compIngrID;

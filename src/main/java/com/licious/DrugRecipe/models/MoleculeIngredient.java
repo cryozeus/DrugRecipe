@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="molecules_ingredients")
-public class MoleculeIngredients {
+public class MoleculeIngredient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

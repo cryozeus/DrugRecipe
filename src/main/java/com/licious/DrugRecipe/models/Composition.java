@@ -21,5 +21,5 @@ public class Composition {
 
     private String compName;
 
-    private List<CompositionIngredients> compIngdList;
+    private List<CompositionIngredient> compIngdList;
 }

@@ -19,6 +19,6 @@ public class Ingredient {
     private int ingdID;
 
     private String ingdName;
-    private List<CompositionIngredients> compIngdList;
-    private List<MoleculeIngredients> molIngdList;
+    private List<CompositionIngredient> compIngdList;
+    private List<MoleculeIngredient> molIngdList;
 }

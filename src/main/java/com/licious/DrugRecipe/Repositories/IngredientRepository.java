@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IngredientRepository extends JpaRepository {
     Ingredient findOneById(int id);
-    Ingredient findByName(String ingdName);
+    Ingredient findOneByName(String ingdName);
 
 
 
