@@ -1,14 +1,18 @@
 package com.licious.DrugRecipe.models;
 
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Table(name="compositions")
 public class Composition {
 
     @Id
@@ -16,4 +20,6 @@ public class Composition {
     private int compID;
 
     private String compName;
+
+    private List<CompositionIngredients> compIngdList;
 }

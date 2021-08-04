@@ -1,21 +1,29 @@
 package com.licious.DrugRecipe.models;
 
-import lombok.Data;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Data
+@ToString
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name="molecules_ingredients")
 public class MoleculeIngredients {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int molIngdID;
 
     //Foreign key to Molecule.molID;
-    private int molID;
+    @JoinColumn(name = "molecule_id", referencedColumnName = "molID")
+    private Molecule mol;
     //Foreign key to Ingredient.ingdID;
-    private int ingdID;
+    @JoinColumn(name = "ingredient_id", referencedColumnName = "ingdID")
+    private Ingredient ingd;
 
 
 }

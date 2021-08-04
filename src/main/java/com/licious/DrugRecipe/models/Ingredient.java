@@ -1,14 +1,17 @@
 package com.licious.DrugRecipe.models;
 
-import lombok.Data;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Data
+@ToString
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name="ingredients")
 public class Ingredient {
 
     @Id
@@ -16,4 +19,6 @@ public class Ingredient {
     private int ingdID;
 
     private String ingdName;
+    private List<CompositionIngredients> compIngdList;
+    private List<MoleculeIngredients> molIngdList;
 }
