@@ -9,11 +9,11 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Ingredients {
-
+public class Molecule {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int ingdID;
+    private int molID;
 
-    private String ingdName;
+    private String molName;
+    private  Boolean rxReqd;
 }

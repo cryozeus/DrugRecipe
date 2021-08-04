@@ -12,9 +12,9 @@ public class MoleculeIngredients {
     @Id
     private int molIngdID;
 
-    //Foreign key to Molecules.molID;
+    //Foreign key to Molecule.molID;
     private int molID;
-    //Foreign key to Ingredients.ingdID;
+    //Foreign key to Ingredient.ingdID;
     private int ingdID;
 
 
